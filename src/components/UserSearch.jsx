@@ -32,7 +32,7 @@ function UserSearch() {
         
 
 
-    },[users])
+    },[value])
 
       
       
@@ -43,7 +43,7 @@ function UserSearch() {
         
         <div>
 
-            <p>Value:{filterusers.map((user)=> user.name)}</p>
+            <p>Value:{filterusers.map((user)=> user.name +", ")}</p>
             <input onChange={change} id='input' type="text" />
 
 
