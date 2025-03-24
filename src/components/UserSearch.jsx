@@ -12,9 +12,11 @@ function UserSearch() {
     const[data1, setData] = useState('');
 
     
-
+    let user_ls = document.getElementById("user_ls");
     function change(event) {
         setValue(event.target.value);
+        user_ls.style.visibility = "visible";
+
         
     }
 
@@ -47,10 +49,10 @@ function UserSearch() {
 
         
         
-        let user_ls = document.getElementById("user_ls");
+        
         let ab =filterusers.map((user)=> user.name);
         if (user_ls.textContent.includes(users_str)) {
-            console.log("A");
+            user_ls.style.visibility = "hidden";
             
             
         }else{
